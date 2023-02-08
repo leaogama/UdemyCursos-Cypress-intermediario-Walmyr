@@ -1,0 +1,20 @@
+{
+  "name": "udemycursos-cypress-intermediario-walmyr",
+  "version": "1.0.0",
+  "description": "UdemyCursos-Cypress-intermediario-Walmyr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leaogama/UdemyCursos-Cypress-intermediario-Walmyr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leaogama/UdemyCursos-Cypress-intermediario-Walmyr/issues"
+  },
+  "homepage": "https://github.com/leaogama/UdemyCursos-Cypress-intermediario-Walmyr#readme"
+}
