@@ -1,20 +1,29 @@
 {
-  "name": "udemycursos-cypress-intermediario-walmyr",
+  "name": "cypress-intermediario-v2",
   "version": "1.0.0",
-  "description": "UdemyCursos-Cypress-intermediario-Walmyr",
-  "main": "index.js",
+  "description": "Repositório do projeto v2 do curso de testes automatizados com Cypress (intermdiário) da Escola TAT no Udemy",
+  "main": "cypress.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leaogama/UdemyCursos-Cypress-intermediario-Walmyr.git"
+    "url": "git+https://github.com/wlsf82/cypress-intermediario-v2.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "Cypress intermediário",
+    "Talking About Testing",
+    "E2E Testing"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leaogama/UdemyCursos-Cypress-intermediario-Walmyr/issues"
+    "url": "https://github.com/wlsf82/cypress-intermediario-v2/issues"
   },
-  "homepage": "https://github.com/leaogama/UdemyCursos-Cypress-intermediario-Walmyr#readme"
+  "homepage": "https://github.com/wlsf82/cypress-intermediario-v2#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.0.2",
+    "cypress-plugin-api": "^2.6.1"
+  }
 }
