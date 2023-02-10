@@ -10,3 +10,10 @@ Cypress.Commands.add('login', (
     }
     login()
 })
+
+Cypress.Commands.add('logout', () =>{
+    cy.get('.qa-user-avatar').should('be.visible')
+    cy.get('.qa-user-avatar').click()
+    cy.contains('Sign out').click()
+    cy.get('[data-qa-selector="sign_in_tab"]').should('be.visible')
+})
