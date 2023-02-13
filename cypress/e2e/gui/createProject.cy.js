@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker';
 
 const randomName = faker.name.fullName(); // Rowan Nikolaus
 const randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
-const randomProduct = faker.commerce.product() // 'Computer'
+const randomProduct = `projeto-${faker.commerce.product()}` // 'Computer'
 const randomProductdescription = faker.commerce.productDescription() // 'Andy shoes are designed to keeping...'
 describe('gui links para New Project', () => {
 
