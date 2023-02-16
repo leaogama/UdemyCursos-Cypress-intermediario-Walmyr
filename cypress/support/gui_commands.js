@@ -11,8 +11,15 @@ Cypress.Commands.add('login', (
       cy.get("[data-qa-selector='sign_in_button']").click()
     }
   
+    const validate = () => {
+      cy.visit('/')
+      cy.location('pathname', { timeout: 1000 })
+        .should('not.eq', '/users/sign_in')
+    }
+  
     const options = {
       cacheAcrossSpecs: true,
+      validate,
     }
   
     if (cacheSession) {
@@ -22,19 +29,25 @@ Cypress.Commands.add('login', (
     }
   })
 
+
+  Cypress.Commands.add('gui_createProject', project => {
+    cy.visit('/projects/new')
+  
+    cy.get('#project_name').type(project.name)
+    cy.get('#project_description').type(project.description)
+    cy.get('.qa-initialize-with-readme-checkbox').check()
+    cy.contains('Create project').click()
+  })
+
 Cypress.Commands.add('logout', () => {
-    cy.get('.qa-user-avatar').should('be.visible')
     cy.get('.qa-user-avatar').click()
     cy.contains('Sign out').click()
-    cy.get('[data-qa-selector="sign_in_tab"]').should('be.visible')
-})
+  })
 
-
-Cypress.Commands.add('gui_createProject', (product, description) => {
-    cy.visit('/projects/new')
-    cy.get('#blank-project-name > .project-name > #project_name').type(product)
-    cy.get('#project_description').type(description)
-    cy.get('[data-qa-selector="private_radio"]').should('be.visible').first().check()
-    cy.get('#project_initialize_with_readme').should('be.visible').check()
-    cy.get('#blank-project-pane > #new_project > .btn-success').click()
-})
+  Cypress.Commands.add('gui_createIssue', issue => {
+    cy.visit(`/${Cypress.env('user_name')}/${issue.project.name}/issues/new`)
+  
+    cy.get('.qa-issuable-form-title').type(issue.title)
+    cy.get('.qa-issuable-form-description').type(issue.description)
+    cy.contains('Submit issue').click()
+  })
