@@ -1,8 +1,10 @@
 /// <reference types="cypress"/>
 import { faker } from '@faker-js/faker'
+const options = { env: { snapshotOnly: true } }
 
-describe('Create Project', () => {
+describe('Create Project', options ,() => {
   beforeEach(() => {
+    cy.api_deleteProjects()
     cy.login()
   })
 
