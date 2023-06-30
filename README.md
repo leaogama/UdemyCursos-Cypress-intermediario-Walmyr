@@ -39,9 +39,9 @@ Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/us
 # UdemyCursos-Cypress-intermediario-Walmyr
  UdemyCursos-Cypress-intermediario-Walmyr
 
-Your New Personal Access Token yT772ixe6Ms6xPDnWPsB
+Your New Personal Access Token eaLFgWQ4gkSGZz2xyyPA
 
-Feed token Jniz9PDPLyqTmGQPuxSx
+Feed token i662ACzDnyQpigYMrx_k
 
 [Testes automatizados com Cypress - Intermdiário](https://github.com/wlsf82/cypress-intermediario-v2)
 
